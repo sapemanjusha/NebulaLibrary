@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | Nebula Library</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/register.css">
+
+</head>
+
+<body>
+
+<div class="background">
+
+<div class="register-card">
+
+<h1>Nebula Library</h1>
+
+<p class="subtitle">
+Begin Your Reading Journey
+</p>
+
+<form>
+
+<label>Full Name</label>
+<input type="text" placeholder="Enter your full name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email">
+
+<label>Phone Number</label>
+<input type="tel" placeholder="Enter your phone number">
+
+<label>Password</label>
+
+<div class="password-box">
+
+<input
+id="password"
+type="password"
+placeholder="Create a password">
+
+<span class="toggle"
+onclick="togglePassword('password', this)">
+👁
+</span>
+
+</div>
+
+<label>Confirm Password</label>
+
+<div class="password-box">
+
+<input
+id="confirmPassword"
+type="password"
+placeholder="Confirm password">
+
+<span class="toggle"
+onclick="togglePassword('confirmPassword', this)">
+👁
+</span>
+
+</div>
+
+<label class="terms">
+
+<input type="checkbox" required>
+
+I agree to the Terms & Conditions
+
+</label>
+
+<button
+type="button"
+onclick="window.location='home.html'">
+
+Create Account
+
+</button>
+
+</form>
+
+<p class="bottom-text">
+
+Already have an account?
+
+<a href="index.html">
+
+Login
+
+</a>
+
+</p>
+
+</div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,12 +1,20 @@
 <?php
 
+// Database Configuration
+
 $host = "localhost";
-$user = "root";
+$username = "root";
 $password = "";
 $database = "nebula_library";
 
-$conn = mysqli_connect($host, $user, $password, $database);
+// Create Connection
 
-if (!$conn) {
-    die("Database connection failed: " . mysqli_connect_error());
+$conn = new mysqli($host, $username, $password, $database);
+
+// Check Connection
+
+if ($conn->connect_error) {
+    die("Connection Failed: " . $conn->connect_error);
 }
+
+?>

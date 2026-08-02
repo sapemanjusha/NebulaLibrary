@@ -41,25 +41,31 @@
 Begin Your Reading Journey
 </p>
 
-<form>
+<form action="auth/register_process.php" method="POST">
 
 <label>Full Name</label>
 <input
 id="fullName"
+name="full_name"
 type="text"
-placeholder="Enter your full name">
+placeholder="Enter your full name"
+required>
 
 <label>Email</label>
 <input
 id="registerEmail"
+name="email"
 type="email"
-placeholder="Enter your email">
+placeholder="Enter your email"
+required>
 
 <label>Phone Number</label>
 <input
 id="phone"
+name="phone"
 type="tel"
-placeholder="Enter your phone number">
+placeholder="Enter your phone number"
+required>
 
 <label>Password</label>
 
@@ -67,8 +73,10 @@ placeholder="Enter your phone number">
 
 <input
 id="password"
+name="password"
 type="password"
-placeholder="Create a password">
+placeholder="Create a password"
+required>
 
 <span class="toggle"
 onclick="togglePassword('password', this)">
@@ -83,8 +91,10 @@ onclick="togglePassword('password', this)">
 
 <input
 id="confirmPassword"
+name="confirm_password"
 type="password"
-placeholder="Confirm password">
+placeholder="Confirm password"
+required>
 
 <span class="toggle"
 onclick="togglePassword('confirmPassword', this)">
@@ -104,9 +114,9 @@ I agree to the Terms & Conditions
 
 </label>
 
-<button
-type="button"
-onclick="registerUser()">
+<button type="submit">
+    Create Account
+</button>
 
 Create Account
 

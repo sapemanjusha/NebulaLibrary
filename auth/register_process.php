@@ -1,6 +1,9 @@
 <?php
 
+session_start();
+
 require_once "../includes/config.php";
+require_once "../includes/functions.php";
 
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -17,15 +20,21 @@ $confirm_password = $_POST["confirm_password"];
 
 // Basic validation
 if (empty($full_name) || empty($email) || empty($phone) || empty($password) || empty($confirm_password)) {
-    die("All fields are required.");
+    setFlash("error","Please fill in all fields.");
+
+    redirect("../register.php");
 }
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die("Invalid email format.");
+    setFlash("error","Invalid email address.");
+
+    redirect("../register.php");
 }
 
 if ($password !== $confirm_password) {
-    die("Passwords do not match.");
+    setFlash("error","Passwords do not match.");
+
+    redirect("../register.php");
 }
 
 // Check if email already exists
@@ -35,7 +44,9 @@ $check->execute();
 $result = $check->get_result();
 
 if ($result->num_rows > 0) {
-    die("An account with this email already exists.");
+    dsetFlash("error","Email already registered.");
+
+    redirect("../register.php");
 }
 
 $check->close();
@@ -60,12 +71,15 @@ $stmt->bind_param(
 
 if ($stmt->execute()) {
 
-    header("Location: ../index.php?registered=1");
-    exit();
+    setFlash("success", "Registration successful! Please login.");
+
+    redirect("../index.php");
 
 } else {
 
-    die("Registration failed. Please try again.");
+    setFlash("error", "Registration failed. Please try again.");
+
+    redirect("../register.php");
 
 }
 

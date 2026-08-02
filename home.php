@@ -1,3 +1,20 @@
+<?php
+
+session_start();
+
+require_once "includes/book_functions.php";
+
+$books = getAllBooks($conn);
+
+if(!isset($_SESSION["user_id"])){
+
+    header("Location: index.php");
+
+    exit();
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,7 +55,12 @@ Nebula Library
 
 <div class="profile">
 
-👋 Welcome
+    👋 Welcome
+    <?php echo htmlspecialchars($_SESSION["full_name"]); ?>
+
+    |
+
+    <a href="auth/logout.php">Logout</a>
 
 </div>
 
@@ -104,61 +126,41 @@ Trending Books
 
 <div class="book-grid">
 
-<div class="card">
-
-    <img src="assets/images/books/clean-code.jpg" alt="Clean Code">
-
-    <h3>Clean Code</h3>
-
-    <p>Robert C. Martin</p>
-
-    <div class="rating">⭐⭐⭐⭐⭐</div>
-
-    <button class="read-btn">Read More</button>
-
-</div>
+<?php while($book = $books->fetch_assoc()): ?>
 
 <div class="card">
 
-    <img src="assets/images/books/atomic-habits.jpg" alt="Clean Code">
+<img
+src="<?php echo htmlspecialchars($book["image"]); ?>"
+alt="<?php echo htmlspecialchars($book["title"]); ?>">
 
-    <h3>Atomic Habits</h3>
+<h3>
 
-    <p>James Clear</p>
+<?php echo htmlspecialchars($book["title"]); ?>
 
-    <div class="rating">⭐⭐⭐⭐🌟</div>
+</h3>
 
-    <button class="read-btn">Read More</button>
+<p>
 
-</div>
+<?php echo htmlspecialchars($book["author"]); ?>
 
-<div class="card">
+</p>
 
-    <img src="assets/images/books/ai-basics.jpg" alt="Clean Code">
+<div class="rating">
 
-    <h3>AI Basics</h3>
-
-    <p>Tom Taulli</p>
-
-    <div class="rating">⭐⭐⭐⭐½</div>
-
-    <button class="read-btn">Read More</button>
+⭐ <?php echo htmlspecialchars($book["rating"]); ?>
 
 </div>
 
-<div class="card">
+<button class="read-btn">
 
-    <img src="assets/images/books/deep-work.jpg" alt="Clean Code">
+Read More
 
-    <h3>Deep Work</h3>
-
-    <p>Cal Newport</p>
-
-    <div class="rating">⭐⭐⭐⭐⭐</div>
-
-    <button class="read-btn">Read More</button>
+</button>
 
 </div>
+
+<?php endwhile; ?>
 
 </div>
 

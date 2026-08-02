@@ -408,3 +408,41 @@ padding:30px;
 }
 
 }
+
+/* Flash Messages */
+
+.alert{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+.alert.success{
+
+    background:#0f5132;
+
+    color:#d1ffe7;
+
+    border:1px solid #198754;
+
+}
+
+.alert.error{
+
+    background:#58151c;
+
+    color:#ffd7dc;
+
+    border:1px solid #dc3545;
+
+}

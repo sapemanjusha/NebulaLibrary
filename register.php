@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+require_once "includes/functions.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,6 +48,8 @@
 <p class="subtitle">
 Begin Your Reading Journey
 </p>
+
+<?php displayFlash(); ?>
 
 <form action="auth/register_process.php" method="POST">
 

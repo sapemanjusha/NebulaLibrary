@@ -12,23 +12,7 @@ function togglePassword(id, icon) {
 }
 
 // Login Validation
-function loginUser() {
 
-    const email = document.getElementById("loginEmail").value.trim();
-    const password = document.getElementById("loginPassword").value.trim();
-
-    if (email === "") {
-        alert("Please enter your email.");
-        return;
-    }
-
-    if (password === "") {
-        alert("Please enter your password.");
-        return;
-    }
-
-    window.location='home.php'
-}
 
 // Registration Validation
 function registerUser() {

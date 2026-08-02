@@ -81,6 +81,26 @@ border-radius:20px;
 
 }
 
+.profile a{
+
+    color:white;
+
+    margin-left:10px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:0.3s;
+
+}
+
+.profile a:hover{
+
+    color:#8ecbff;
+
+}
+
 .hero{
 
 padding:80px 10%;

@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+
+require_once "includes/functions.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,21 +49,27 @@
             Explore Stories Beyond the Stars
         </p>
 
-        <form>
+        <?php displayFlash(); ?>
+
+        <form action="auth/login.php" method="POST">
 
             <label>Email</label>
 
             <input
             id="loginEmail"
+            name="email"
             type="email"
-            placeholder="Enter your email">
+            placeholder="Enter your email"
+            required>
 
             <label>Password</label>
 
             <input
             id="loginPassword"
+            name="password"
             type="password"
-            placeholder="Enter your password">
+            placeholder="Enter your password"
+            required>
 
             <div class="options">
 
@@ -71,9 +85,11 @@
 
             </div>
 
-            <button
-            type="button"
-            onclick="loginUser()">
+            <button type="submit">
+
+            Login
+
+            </button>
 
             Login
 

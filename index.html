@@ -18,6 +18,19 @@
 
 <body>
 
+<div class="stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 <div class="background">
 
     <div class="login-card">
@@ -32,13 +45,17 @@
 
             <label>Email</label>
 
-            <input type="email"
-                   placeholder="Enter your email">
+            <input
+            id="loginEmail"
+            type="email"
+            placeholder="Enter your email">
 
             <label>Password</label>
 
-            <input type="password"
-                   placeholder="Enter your password">
+            <input
+            id="loginPassword"
+            type="password"
+            placeholder="Enter your password">
 
             <div class="options">
 
@@ -54,10 +71,11 @@
 
             </div>
 
-            <button type="button"
-                    onclick="window.location='home.html'">
+            <button
+            type="button"
+            onclick="loginUser()">
 
-                Login
+            Login
 
             </button>
 
@@ -78,6 +96,8 @@
     </div>
 
 </div>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

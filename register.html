@@ -18,6 +18,19 @@
 
 <body>
 
+<div class="stars">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
 <div class="background">
 
 <div class="register-card">
@@ -31,13 +44,22 @@ Begin Your Reading Journey
 <form>
 
 <label>Full Name</label>
-<input type="text" placeholder="Enter your full name">
+<input
+id="fullName"
+type="text"
+placeholder="Enter your full name">
 
 <label>Email</label>
-<input type="email" placeholder="Enter your email">
+<input
+id="registerEmail"
+type="email"
+placeholder="Enter your email">
 
 <label>Phone Number</label>
-<input type="tel" placeholder="Enter your phone number">
+<input
+id="phone"
+type="tel"
+placeholder="Enter your phone number">
 
 <label>Password</label>
 
@@ -73,7 +95,10 @@ onclick="togglePassword('confirmPassword', this)">
 
 <label class="terms">
 
-<input type="checkbox" required>
+<input
+id="terms"
+type="checkbox"
+required>
 
 I agree to the Terms & Conditions
 
@@ -81,7 +106,7 @@ I agree to the Terms & Conditions
 
 <button
 type="button"
-onclick="window.location='home.html'">
+onclick="registerUser()">
 
 Create Account
 

@@ -27,7 +27,7 @@ function loginUser() {
         return;
     }
 
-    window.location.href = "home.html";
+    window.location='home.php'
 }
 
 // Registration Validation
@@ -57,5 +57,5 @@ function registerUser() {
 
     alert("Registration Successful!");
 
-    window.location.href = "home.html";
+    window.location='home.php'
 }

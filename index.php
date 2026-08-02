@@ -12,7 +12,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
@@ -85,7 +85,7 @@
 
             New here?
 
-            <a href="register.html">
+            <a href="register.php">
 
                 Create Account
 
@@ -97,7 +97,7 @@
 
 </div>
 
-<script src="js/script.js"></script>
+<script src="assets/js/script.js"></script>
 
 </body>
 </html>

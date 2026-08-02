@@ -12,7 +12,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="assets/css/home.css">
 
 </head>
 
@@ -106,7 +106,7 @@ Trending Books
 
 <div class="card">
 
-    <img src="images/books/clean-code.jpg" alt="Clean Code">
+    <img src="assets/images/books/clean-code.jpg" alt="Clean Code">
 
     <h3>Clean Code</h3>
 
@@ -120,7 +120,7 @@ Trending Books
 
 <div class="card">
 
-    <img src="images/books/atomic-habits.jpg" alt="Clean Code">
+    <img src="assets/images/books/atomic-habits.jpg" alt="Clean Code">
 
     <h3>Atomic Habits</h3>
 
@@ -134,7 +134,7 @@ Trending Books
 
 <div class="card">
 
-    <img src="images/books/ai-basics.jpg" alt="Clean Code">
+    <img src="assets/images/books/ai-basics.jpg" alt="Clean Code">
 
     <h3>AI Basics</h3>
 
@@ -148,7 +148,7 @@ Trending Books
 
 <div class="card">
 
-    <img src="images/books/deep-work.jpg" alt="Clean Code">
+    <img src="assets/images/books/deep-work.jpg" alt="Clean Code">
 
     <h3>Deep Work</h3>
 
